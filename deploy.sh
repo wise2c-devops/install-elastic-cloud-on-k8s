@@ -1,7 +1,9 @@
 #!/bin/bash
 set -e
 
-MyImageRepositoryIP=`cat components.txt |grep "Harbor Address" |awk '{print $3}'`
+path=`dirname $0`
+
+MyImageRepositoryIP=`cat ${path}/components.txt |grep "Harbor Address" |awk '{print $3}'`
 MyImageRepositoryProject=library
 ElasticCloudVersion=`cat ${path}/components.txt |grep "ElasticCloud" |awk '{print $3}'`
 ElasticStackVersion=`cat ${path}/components.txt |grep "ElasticStack" |awk '{print $3}'`
