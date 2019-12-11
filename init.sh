@@ -17,11 +17,10 @@ echo "fluent/fluentd-kubernetes-daemonset:v1-debian-elasticsearch" >> ${path}/fi
 echo 'Images list for Elastic Cloud:'
 cat ${path}/file/images-list.txt
 
-cd ${path}/file/
-for file in $(cat images-list.txt); do docker pull $file; done
+for file in $(cat ${path}/file/images-list.txt); do docker pull $file; done
 echo 'Images pulled.'
 
-docker save $(cat images-list.txt) -o ${path}/file/elastic-cloud-images.tar
+docker save $(cat ${path}/file/images-list.txt) -o ${path}/file/elastic-cloud-images.tar
 echo 'Images saved.'
 
 curl -L -o ${path}/file/fluentd-origin.yaml https://raw.githubusercontent.com/fluent/fluentd-kubernetes-daemonset/master/fluentd-daemonset-elasticsearch-rbac.yaml
