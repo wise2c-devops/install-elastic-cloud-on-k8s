@@ -1,2 +1,3 @@
 ElasticCloud Version: 1.0.0-beta1
-Harbor Address: 192.168.0.11
+ElasticStack Version: 7.4.2
+Harbor Address: 192.168.9.20
