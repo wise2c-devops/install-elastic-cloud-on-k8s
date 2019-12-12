@@ -21,7 +21,7 @@ cd install-elastic-cloud-on-k8s
 bash deploy.sh
 ```
 
-If you want to change the nodeport for 3 services (Elasticsearch, Kibana, Fluentd-UI), please update the files in template folder.
+If you want to change the nodeport for 2 services (Elasticsearch, Kibana), please update the files in template folder.
 
 **3. Remove Elastic Cloud on Kubernetes**
 
